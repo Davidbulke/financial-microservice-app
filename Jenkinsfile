@@ -32,7 +32,7 @@ pipeline {
                   branch: 'main'
                 )
                 script {
-                    // Use sed or similar to update deployment.yaml with $BUILD_NUMBER or latest
+                    // Escape $ in Groovy string, use ${} for Jenkins Environment variables
                     sh "sed -i 's|image: .*\$|image: ${IMAGE_NAME}:${BUILD_NUMBER}|' dev/deployment.yaml"
                     sh 'git config user.email "ci@example.com"'
                     sh 'git config user.name "ci-bot"'
