@@ -18,4 +18,4 @@ def health_check():
 if __name__ == '__main__':
     # Running on 0.0.0.0 makes it accessible from outside the container.
     # Port 8080 is a common choice for custom applications.
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080) #test
