@@ -11,6 +11,7 @@ pipeline {
             steps {
                 git(
                   url: 'git@github.com:davidbulke/financial-microservice-app.git',
+                  branch: 'main',
                   credentialsId: 'git'
                 )
             }
